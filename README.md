@@ -9,7 +9,7 @@ Available options with notes, the values here are the defaults.
 
 ```javascript
 $.fn.wPaginate.defaultSettings = {
-    theme           : 'default',    // theme for plugin to use
+    theme           : 'black',      // theme for plugin to use
     first           : '<<',         // html for first page link (null for no link)
     prev            : '<',          // html for prev page link (null for no link)
     next            : '>',          // html for next page link (null for no link)
@@ -43,7 +43,7 @@ $('#elem').wPaginate('destroy');
 Init with some values:
 
 ```javascript
-$("body").wPaginate({
+$("#elem").wPaginate({
     theme: 'green',
     total: 123,
     index: 40,
@@ -55,7 +55,7 @@ $("body").wPaginate({
 Init with dynamic url:
 
 ```javascript
-$("body").wPaginate({
+$("#elem").wPaginate({
     theme: 'red',
     total: 123,
     index: 40,
@@ -64,10 +64,10 @@ $("body").wPaginate({
 });
 ```
 
-Enable ajax with url as callback
+Enable ajax with url as callback:
 
 ```javascript
-$("body").wPaginate({
+$("#elem").wPaginate({
     theme: 'red',
     total: 123,
     index: 40,
