@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Websanova jQuery Pagination Plugin</title>
+
+	<script type="text/javascript" src="./inc/jquery.1.8.2.min.js"></script>
+	
+	<link rel="Stylesheet" type="text/css" href="./wPaginate.css" />
+	<script type="text/javascript" src="./wPaginate.js"></script>
+	
+</head>
+<body>
+
+	<h3>Default Demo</h3>
+
+	<div id="wPaginate1"></div><br/>
+	<div id="wPaginate2"></div><br/>
+	<div id="wPaginate3"></div><br/>
+	<div id="wPaginate4"></div>
+	<br/><br/>
+	<input type="button" value="destroy 1" onclick="destroy_pag()"/>
+
+	<script type="text/javascript">
+		$('#wPaginate1').wPaginate({theme:'red'});
+		$('#wPaginate2').wPaginate({theme:'green', total:123, limit:10, index:20});
+		$('#wPaginate3').wPaginate({theme:'blue', total:5435, limit:20, index:300});
+		$('#wPaginate4').wPaginate({theme:'black', total:243, limit:20, index:240});
+
+		function destroy_pag()
+		{
+			console.log($('#wPaginate1').data('_wPaginate'));
+			$('#wPaginate1').wPaginate('destroy');
+			console.log($('#wPaginate1').data('_wPaginate'));
+		}
+	</script>
+
+	<h3>Ajax Demo</h3>
+
+	<div id="wPaginate5"></div>
+	<br/>
+	<div id="wPaginate5_contents"></div>
+
+	<script type="text/javascript">
+		$('#wPaginate5').wPaginate({
+			theme:'black',
+			url: function(i)
+			{
+				$('#wPaginate5_contents').html('Yay, you have reached page ' + (i+1) + ', and index ' + i*this.settings.limit);
+			},
+			ajax: true
+		});
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

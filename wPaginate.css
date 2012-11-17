@@ -1,0 +1,24 @@
+/*** styling ***/
+._wPaginate_link{
+	display:inline-block; margin-left:5px;
+	line-height:20px; width:20px; text-align:center; font-family:verdana; font-size:10px; cursor:pointer;
+	border:solid black 1px; text-decoration:none; border-radius:5px;
+}
+._wPaginate_link_first, ._wPaginate_link_prev, ._wPaginate_link_next, ._wPaginate_link_last{width:auto; line-height:10px; padding:3px 5px;}
+
+/*** themes ***/
+._wPaginate_red ._wPaginate_link{border-color:#CE6F6F; color:#CE6F6F;}
+._wPaginate_red ._wPaginate_link:hover,
+._wPaginate_red ._wPaginate_link_active{border-color:#9C2F2F; color:#9C2F2F;}
+
+._wPaginate_green ._wPaginate_link{border-color:#A9DB66; color:#A9DB66;}
+._wPaginate_green ._wPaginate_link:hover,
+._wPaginate_green ._wPaginate_link_active{border-color:#58792E; color:#58792E;}
+
+._wPaginate_blue ._wPaginate_link{border-color:#ADD9ED; color:#ADD9ED;}
+._wPaginate_blue ._wPaginate_link:hover,
+._wPaginate_blue ._wPaginate_link_active{border-color:#4D9FBF; color:#4D9FBF;}
+
+._wPaginate_black ._wPaginate_link{border-color:#000; color:#000;}
+._wPaginate_black ._wPaginate_link:hover,
+._wPaginate_black ._wPaginate_link_active{border-color:#FF0000; color:#FF0000;}
