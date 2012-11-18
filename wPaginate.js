@@ -8,7 +8,7 @@
  * @license         This websanova jQuery pagination plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wPaginate
- * @version         Version 1.0.0
+ * @version         Version 1.0.1
  *
  ******************************************/
 
@@ -101,8 +101,10 @@
 			var currentPage = Math.ceil(this.settings.index/this.settings.limit);
 			var start = 0, end = 0;
 
+			console.log(totalPages + ':' + visiblePages)
+
 			// get start and end page
-			if(totalPages <= visiblePages) { start = 0; end = visiblePages; }
+			if(totalPages <= visiblePages) { start = 0; end = totalPages; }
 			else if(currentPage < this.settings.spread){ start = 0; end = visiblePages; }
 			else if(currentPage > totalPages - this.settings.spread-1){ start = totalPages-visiblePages; end=totalPages; }
 			else{ start = currentPage-this.settings.spread; end=currentPage+this.settings.spread+1; }
