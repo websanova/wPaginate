@@ -1,0 +1,37 @@
+{
+  "name": "wPaginate",
+  "title": "wPaginate jQuery Plugin",
+  "description": "A jQuery pagination plugin",
+  "keywords": [
+    "websanova",
+    "wPaginate",
+    "paginate",
+    "pagination"
+  ],
+  "version": "v1.0.2",
+  "author": {
+    "name": "Websanova",
+    "email": "rob@websanova.com",
+    "url": "http://websanova.com"
+  },
+  "maintainers": [
+    {
+      "name": "Websanova",
+      "email": "rob@websanova.com",
+      "url": "http://websanova.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/websanova/wPaginate#license"
+    }
+  ],
+  "bugs": "https://github.com/websanova/wPaginate/issues",
+  "homepage": "http://websanova.com/plugins/pagination",
+  "docs": "https://github.com/websanova/wPaginate#wpaginatejs",
+  "download": "https://github.com/websanova/wPaginate/tags",
+  "dependencies": {
+    "jquery": ">=1.5"
+  }
+}

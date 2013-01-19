@@ -8,7 +8,7 @@
  * @license         This websanova jQuery pagination plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wPaginate
- * @version         Version 1.0.1
+ * @version         Version 1.0.2
  *
  ******************************************/
 
