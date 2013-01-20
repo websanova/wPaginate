@@ -1,14 +1,14 @@
 {
   "name": "wPaginate",
   "title": "wPaginate jQuery Plugin",
-  "description": "A jQuery pagination plugin",
+  "description": "A jQuery pagination plugin by Websanova",
   "keywords": [
     "websanova",
     "wPaginate",
     "paginate",
     "pagination"
   ],
-  "version": "v1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Websanova",
     "email": "rob@websanova.com",
