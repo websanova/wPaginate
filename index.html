@@ -18,7 +18,10 @@
 	<div id="wPaginate1"></div><br/>
 	<div id="wPaginate2"></div><br/>
 	<div id="wPaginate3"></div><br/>
-	<div id="wPaginate4"></div>
+	<div id="wPaginate4"></div><br/>
+	<div id="wPaginate5"></div><br/>
+	<div id="wPaginate6"></div><br/>
+	<div id="wPaginate7"></div>
 	<br/><br/>
 	<input type="button" value="destroy 1" onclick="destroy_pag()"/>
 
@@ -27,6 +30,9 @@
 		$('#wPaginate2').wPaginate({theme:'green', total:83, limit:20, index:20});
 		$('#wPaginate3').wPaginate({theme:'blue', total:5435, limit:20, index:300});
 		$('#wPaginate4').wPaginate({theme:'black', total:243, limit:20, index:240});
+		$('#wPaginate5').wPaginate({theme:'orange', total:200, limit:20, index:0});
+		$('#wPaginate6').wPaginate({theme:'lightblue', total:300, limit:20, index:0});
+		$('#wPaginate7').wPaginate({theme:'grey', total:400, limit:20, index:0});
 
 		function destroy_pag()
 		{
@@ -38,16 +44,16 @@
 
 	<h3>Ajax Demo</h3>
 
-	<div id="wPaginate5"></div>
+	<div id="wPaginate8"></div>
 	<br/>
-	<div id="wPaginate5_contents"></div>
+	<div id="wPaginate8_contents"></div>
 
 	<script type="text/javascript">
-		$('#wPaginate5').wPaginate({
-			theme:'black',
+		$('#wPaginate8').wPaginate({
+			theme: 'black',
 			url: function(i)
 			{
-				$('#wPaginate5_contents').html('Yay, you have reached page ' + (i+1) + ', and index ' + i*this.settings.limit);
+				$('#wPaginate8_contents').html('Yay, you have reached page ' + (i+1) + ', and index ' + i*this.settings.limit);
 			},
 			ajax: true
 		});
