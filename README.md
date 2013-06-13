@@ -1,6 +1,14 @@
 # wPaginate.js
 
-A simple, lightweight and flexible jQuery pagination plugin with ajax support. [Check out the live demo](http://www.websanova.com/plugins/pagination).
+A jQuery pagination plugin for simply setting up pagination on the fly.  The plugin allows you to set how many pages are displayed at a time on a sliding scale and also has ajax support out of the box.
+
+* [View the wPaginate demo](http://wpaginate.websanova.com)
+* [Download the lastest version of wPaginate](https://github.com/websanova/wPaginate/tags)
+
+
+## Related Plugins
+
+* [wForm](http://wform.websanova.com) - A combination of plugins for elegant looking forms.
 
 
 ## Settings
@@ -23,26 +31,21 @@ $.fn.wPaginate.defaultSettings = {
 };
 ```
 
-Retrieve settings, if more than one it will return an array otherwise just the value.
-
-```javascript
-console.log($('#elem').wPaginate('total'));            // "400"
-console.log($('.elem').wPaginate('total'));            // ["400", "200"]
-```
-
-
-## Methods
-
-```html
-$('#elem').wPaginate('destroy');
-```
-
 
 ## Examples
 
-Init with some values:
+Include the following files:
 
-```javascript
+```js
+<script type="text/javascript" src="./wPaginate.js"></script>
+<link rel="Stylesheet" type="text/css" href="./wPaginate.css" />
+```
+
+### init
+
+Init with static url:
+
+```js
 $("#elem").wPaginate({
     theme: 'green',
     total: 123,
@@ -54,7 +57,7 @@ $("#elem").wPaginate({
 
 Init with dynamic url:
 
-```javascript
+```js
 $("#elem").wPaginate({
     theme: 'red',
     total: 123,
@@ -64,9 +67,9 @@ $("#elem").wPaginate({
 });
 ```
 
-Enable ajax with url as callback:
+### ajax
 
-```javascript
+```js
 $("#elem").wPaginate({
     theme: 'red',
     total: 123,
@@ -77,8 +80,7 @@ $("#elem").wPaginate({
 });
 ```
 
-
-## Themes
+### themes
 
 A few default styling themes are provided in the `wPaginate.css` file, however you can be easily add your own by following the styling indicated there which should look something similar to the sampel below:
 
@@ -88,9 +90,18 @@ A few default styling themes are provided in the `wPaginate.css` file, however y
 ._wPaginate_black ._wPaginate_link_active{border-color:#FF0000; color:#FF0000;}
 ```
 
+### destroy
+
+Remove pagination on the speicified element.
+
+```html
+$('#elem').wPaginate('destroy');
+```
+
 
 ## Resources
 
+* [More jQuery plugins by Websanova](http://websanova.com/plugins)
 * [jQuery Plugin Development Boilerplate](http://www.websanova.com/tutorials/jquery/jquery-plugin-development-boilerplate)
 * [The Ultimate Guide to Writing jQuery Plugins](http://www.websanova.com/tutorials/jquery/the-ultimate-guide-to-writing-jquery-plugins)
 
