@@ -1,164 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" />
-    <meta name="keywords" content="jquery, plugin, paginate, pagination, pages" />
-    <meta name="description" content="A jQuery pagination plugin for simply setting up pagination on the fly.  The plugin allows you to set how many pages are displayed at a time on a sliding scale and also has ajax support out of the box." />
-    <meta name = "owner" content = "Websanova" />
-    <meta property="og:title" content="jQuery Pagination Plugin"/>
-    <meta property="og:description" content="A jQuery pagination plugin for simply setting up pagination on the fly.  The plugin allows you to set how many pages are displayed at a time on a sliding scale and also has ajax support out of the box." />
-    <meta property="og:url" content="http://wpaginate.websanova.com"/>
-    <meta property="og:image" content="http://www.websanova.com/wp-content/uploads/2013/06/wpaginate-jquery-pagination-plugin.png" />
-    <meta property="og:type" content="article"/>
-    <meta property="og:site_name" content="Websanova"/>
-
-    <link rel="icon" type="image/vnd.microsoft.icon"  href="./assets/img/favicon.ico" />
-    <title>wPaginate :: jQuery Pagination Plugin</title>
-    
-    <script type="text/javascript" src="./assets/jquery.1.9.1.min.js"></script>
-    <link rel="Stylesheet" type="text/css" href="./assets/demo.css" />
+  <meta charset="utf-8">
+  <title>Websanova :: wPaginate</title>
+  
+  <!-- filestart -->
+  <link rel="icon" type="image/vnd.microsoft.icon"  href="./demo/img/favicon.ico" />
+  <link rel="Stylesheet" type="text/css" href="./demo/demo.css" />
+  <script type="text/javascript" src="./lib/jquery.1.10.2.min.js"></script>
+  <!-- fileend -->
 </head>
 <body>
-    <header>
-        <a id="header-logo" href="http://websanova.com"></a>
+  <!-- headstart -->
+  <header>
+    <a id="header-logo" href="http://websanova.com"></a>
 
-        <div id="header-links">
-            <a href="http://websanova.com">Home</a>
-            <a href="http://websanova.com/plugins">Plugins</a>
-            <a href="http://websanova.com/extensions">Extensions</a>
-        </div>
-    </header>   
-
-    <div id="content">
-        <h1 id="plugin-name">wPaginate.js</h1>
-
-        <div id="addthis-toolbox" class="addthis_toolbox addthis_default_style">
-            <a id="github-button" href="https://github.com/websanova/wPaginate" target="_blank" title="GitHub"></a>
-            <a class="addthis_button_facebook" addthis:url="http://wpaginate.websanova.com" addthis:title="jQuery Pagination Plugin"></a>
-            <a class="addthis_button_twitter" addthis:url="http://wpaginate.websanova.com" addthis:title="jQuery Pagination Plugin"></a>
-            <a class="addthis_button_google_plusone_share" addthis:url="http://wpaginate.websanova.com" addthis:title="jQuery Pagination Plugin"></a>
-            <a class="addthis_button_reddit" addthis:url="http://wpaginate.websanova.com" addthis:title="jQuery Pagination Plugin"></a>
-            <a class="addthis_button_dzone" addthis:url="http://wpaginate.websanova.com" addthis:title="jQuery Pagination Plugin"></a>
-            <a class="addthis_button_compact" addthis:url="http://wpaginate.websanova.com" addthis:title="jQuery Pagination Plugin"></a>
-        </div>
-
-        <h2>About</h2>
-
-        <div class="content-box">
-            A jQuery pagination plugin for simply setting up pagination on the fly.  The plugin allows you to set how many pages are displayed at a time on a sliding scale and also has ajax support out of the box.
-        </div>
-
-        <ul>
-            <li><a href="https://github.com/websanova/wPaginate/tags">Download</a></li>
-            <li><a href="https://github.com/websanova/wPaginate#wpaginatejs">Documentation</a></li>
-        </ul>
-
-        <h2>Related Plugins</h2>
-
-        <ul>
-            <li><a href="http://wform.websanova.com">wForm</a> - A combination of plugins for elegant looking forms.</li>
-        </ul>
-
-        <h2>Demo</h2>
-
-        <div class="content-box">
-            <div id="wPaginate1"></div><br/>
-            <div id="wPaginate2"></div><br/>
-            <div id="wPaginate3"></div><br/>
-            <div id="wPaginate4"></div><br/>
-            <div id="wPaginate5"></div><br/>
-            <div id="wPaginate6"></div><br/>
-            <div id="wPaginate7"></div>
-            <br/>
-            <input type="button" value="destroy 1" onclick="destroy_pag()"/>
-        </div>
-
-        <h2>Ajax Demo</h2>
-
-        <div class="content-box">
-            <div id="wPaginate8"></div>
-            <br/>
-            <div id="wPaginate8_contents"></div>
-        </div>
-
-        <link rel="Stylesheet" type="text/css" href="./wPaginate.css" />
-        <script type="text/javascript" src="./wPaginate.js"></script>
-
-        <script type="text/javascript">
-            $('#wPaginate1').wPaginate({theme:'red'});
-            $('#wPaginate2').wPaginate({theme:'green', total:83, limit:20, index:20});
-            $('#wPaginate3').wPaginate({theme:'blue', total:5435, limit:20, index:300});
-            $('#wPaginate4').wPaginate({theme:'black', total:243, limit:20, index:240});
-            $('#wPaginate5').wPaginate({theme:'orange', total:200, limit:20, index:0});
-            $('#wPaginate6').wPaginate({theme:'lightblue', total:300, limit:20, index:0});
-            $('#wPaginate7').wPaginate({theme:'grey', total:400, limit:20, index:0});
-
-            function destroy_pag()
-            {
-                console.log($('#wPaginate1').data('_wPaginate'));
-                $('#wPaginate1').wPaginate('destroy');
-                console.log($('#wPaginate1').data('_wPaginate'));
-            }
-        </script>
-
-        <script type="text/javascript">
-            $('#wPaginate8').wPaginate({
-                theme: 'black',
-                url: function(i)
-                {
-                    $('#wPaginate8_contents').html('Yay, you have reached page ' + (i+1) + ', and index ' + i*this.settings.limit);
-                },
-                ajax: true
-            });
-        </script>
-
-        <h2>Resources</h2>
-
-        <ul>
-            <li><a href="http://websanova.com/plugins">More jQuery plugins by Websanova</a></li>
-            <li><a href="http://wboiler.websanova.com">jQuery Plugin Development Boilerplate</a></li>
-            <li><a href="http://www.websanova.com/blog/jquery/the-ultimate-guide-to-writing-jquery-plugins">The Ultimate Guide to Writing jQuery Plugins</a></li>
-        </ul>
+    <div id="header-links">
+      <a href="http://websanova.com">Blog</a>
+      <a href="http://websanova.com/plugins">Plugins</a>
+      <a href="http://websanova.com/extensions">Extensions</a>
+      <a href="http://websanova.com/services">Services</a>
     </div>
+  </header>
+  <!-- headend -->
 
-    <footer>
-        <div id="footer-icons">
-            <!--a id="youtube-icon" href="http://websanova.com/youtube" target="_blank"></a-->
-            <a id="stumbleupon-icon" href="http://websanova.com/stumbleupon" target="_blank"></a>
-            <a id="linkedin-icon" href="http://websanova.com/linkedin" target="_blank"></a>
-            <a id="facebook-icon" href="http://websanova.com/facebook" target="_blank"></a>
-            <a id="googleplus-icon" href="http://websanova.com/googleplus" target="_blank"></a>
-            <a id="twitter-icon" href="http://websanova.com/twitter" target="_blank"></a>
-            <a id="github-icon" href="http://websanova.com/github" target="_blank"></a>
-            <a id="rss-icon" href="http://websanova.com/feed" target="_blank"></a>
-        </div>
-    </footer>
+  <div id="content">
+    <h1 id="plugin-name">wPaginate.js</h1>
 
-    <script type="text/javascript">
-        if(window.location.protocol === 'file:') $('#addthis-toolbox').hide();
-    </script>
+    <div class="content-box">
+      <div id="wPaginate1"></div><br/>
+      <div id="wPaginate2"></div><br/>
+      <div id="wPaginate3"></div><br/>
+      <div id="wPaginate4"></div><br/>
+      <div id="wPaginate5"></div><br/>
+      <div id="wPaginate6"></div><br/>
+      <div id="wPaginate7"></div>
+      <br/>
+      <input type="button" value="destroy 1" onclick="destroy_pag()"/>
 
-    <!-- AddThis Button BEGIN -->
-    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-504fdeb9241970a8"></script>
-    <!-- AddThis Button END -->
+      <div id="wPaginate8"></div>
+      <br/>
+      <div id="wPaginate8_contents"></div>
 
-    <!-- google analytics -->
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-12380236-11']);
-        _gaq.push(['_trackPageview']);
+      <link rel="Stylesheet" type="text/css" href="./wPaginate.css" />
+      <script type="text/javascript" src="./wPaginate.js"></script>
 
-        var _gaq_rollup = _gaq || [];
-        _gaq_rollup.push(['_setAccount', 'UA-12380236-19']);
-        _gaq_rollup.push(['_trackPageview']);
+      <script type="text/javascript">
+        $('#wPaginate1').wPaginate({theme:'red'});
+        $('#wPaginate2').wPaginate({theme:'green', total:83, limit:20, index:20});
+        $('#wPaginate3').wPaginate({theme:'blue', total:5435, limit:20, index:300});
+        $('#wPaginate4').wPaginate({theme:'black', total:243, limit:20, index:240});
+        $('#wPaginate5').wPaginate({theme:'orange', total:200, limit:20, index:0});
+        $('#wPaginate6').wPaginate({theme:'lightblue', total:300, limit:20, index:0});
+        $('#wPaginate7').wPaginate({theme:'grey', total:400, limit:20, index:0});
 
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+        function destroy_pag() {
+          console.log($('#wPaginate1').data('_wPaginate'));
+          $('#wPaginate1').wPaginate('destroy');
+          console.log($('#wPaginate1').data('_wPaginate'));
+        }
+
+        $('#wPaginate8').wPaginate({
+          theme: 'black',
+          url: function(i) {
+              $('#wPaginate8_contents').html('Yay, you have reached page ' + (i+1) + ', and index ' + i*this.settings.limit);
+          },
+          ajax: true
+        });
+      </script>
+    </div>
+  </div>
+
+  <!-- footstart -->
+  <footer>
+    <div id="footer-icons">
+      <!--a id="youtube-icon" href="http://websanova.com/youtube" target="_blank"></a-->
+      <a id="stumbleupon-icon" href="http://websanova.com/stumbleupon" target="_blank"></a>
+      <a id="linkedin-icon" href="http://websanova.com/linkedin" target="_blank"></a>
+      <a id="facebook-icon" href="http://websanova.com/facebook" target="_blank"></a>
+      <a id="googleplus-icon" href="http://websanova.com/googleplus" target="_blank"></a>
+      <a id="twitter-icon" href="http://websanova.com/twitter" target="_blank"></a>
+      <a id="github-icon" href="http://websanova.com/github" target="_blank"></a>
+      <a id="rss-icon" href="http://websanova.com/feed" target="_blank"></a>
+    </div>
+  </footer>
+  <!-- footend -->
 </body>
 </html>
