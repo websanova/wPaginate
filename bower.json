@@ -1,0 +1,28 @@
+{
+  "name": "wpaginate",
+  "version": "1.0.5",
+  "homepage": "http://github.com/websanova/wPaginate",
+  "description": "A jQuery pagination plugin for simply setting up pagination on the fly.  The plugin allows you to set how many pages are displayed at a time on a sliding scale and also has ajax support out of the box.",
+  "main": ["wPaginate.js", "wPaginate.css"],
+  "authors": [
+    {
+      "name": "Websanova",
+      "email": "rob@websanova.com",
+      "url": "http://websanova.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/websanova/wPaginate.git"
+  },
+  "license": "MIT & GPL",
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "keywords": [
+    "websanova",
+    "wPaginate",
+    "paginate",
+    "pagination"
+  ],
+}
